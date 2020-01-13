@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import CardList from './CardList'
-import {robots} from '../Data/robots'
 import SearchBox from './SearchBox'
 import '../CSS/App.css'
 class App extends Component  {
@@ -17,7 +16,6 @@ class App extends Component  {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response =>{return response.json()})
         .then(users =>{this.setState({robots: users})});
-
         //this.setState({robots:robots});
         console.log('componentDidMount');
     }
